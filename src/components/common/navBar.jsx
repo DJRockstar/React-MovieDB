@@ -1,14 +1,16 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import Customers from "../customers";
+import Rentals from "../rentals";
 
 const NavBar = () => {
   return (
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <Link class="navbar-brand" to="/movies">
+    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <Link className="navbar-brand" to="/movies">
         Vidly
       </Link>
       <button
-        class="navbar-toggler"
+        className="navbar-toggler"
         type="button"
         data-toggle="collapse"
         data-target="#navbarNav"
@@ -16,25 +18,22 @@ const NavBar = () => {
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
-        <span class="navbar-toggler-icon" />
+        <span className="navbar-toggler-icon" />
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item active">
-            <Link class="nav-link" to="/movies">
-              Home
-            </Link>
-          </li>
-          <li class="nav-item">
-            <Link class="nav-link" to="/customers">
-              Customers
-            </Link>
-          </li>
-          <li class="nav-item">
-            <Link class="nav-link" to="/rentals">
-              Rentals
-            </Link>
-          </li>
+      <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <ul className="navbar-nav">
+          <NavLink className="nav-item nav-link" to="/movies">
+            Movies
+          </NavLink>
+          <NavLink className="nav-item nav-link" to="/customers">
+            Customers
+          </NavLink>
+          <NavLink className="nav-item nav-link" to="/rentals">
+            Rentals
+          </NavLink>
+          <NavLink className="nav-item nav-link" to="/login">
+            Login
+          </NavLink>
         </ul>
       </div>
     </nav>
